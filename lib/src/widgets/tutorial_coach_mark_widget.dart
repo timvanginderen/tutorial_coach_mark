@@ -206,6 +206,7 @@ class TutorialCoachMarkWidgetState extends State<TutorialCoachMarkWidget> {
             child: Padding(
               padding: const EdgeInsets.all(20.0),
               child: Row(
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   Icon(
                     Icons.close,
