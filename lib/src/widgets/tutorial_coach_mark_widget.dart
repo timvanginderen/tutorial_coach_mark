@@ -110,7 +110,9 @@ class TutorialCoachMarkWidgetState extends State<TutorialCoachMarkWidget> {
     double haloHeight;
 
     if (currentTarget.shape == ShapeLightFocus.Circle) {
-      haloWidth = target.size.width > target.size.height ? target.size.width : target.size.height;
+      haloWidth = target.size.width > target.size.height
+          ? target.size.width
+          : target.size.height;
       haloHeight = haloWidth;
     } else {
       haloWidth = target.size.width;
@@ -140,7 +142,8 @@ class TutorialCoachMarkWidgetState extends State<TutorialCoachMarkWidget> {
             weight = MediaQuery.of(context).size.width;
             left = 0;
             top = null;
-            bottom = haloHeight + (MediaQuery.of(context).size.height - positioned.dy);
+            bottom = haloHeight +
+                (MediaQuery.of(context).size.height - positioned.dy);
           }
           break;
         case ContentAlign.left:
@@ -202,9 +205,17 @@ class TutorialCoachMarkWidgetState extends State<TutorialCoachMarkWidget> {
             onTap: widget.onClickSkip,
             child: Padding(
               padding: const EdgeInsets.all(20.0),
-              child: Text(
-                widget.textSkip,
-                style: widget.textStyleSkip,
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.close,
+                    color: Colors.white,
+                  ),
+                  Text(
+                    widget.textSkip,
+                    style: widget.textStyleSkip,
+                  ),
+                ],
               ),
             ),
           ),
