@@ -86,7 +86,8 @@ class TutorialCoachMarkWidgetState extends State<TutorialCoachMarkWidget> {
             duration: Duration(milliseconds: 300),
             child: _buildContents(),
           ),
-          _buildSkip()
+          _buildSkip(),
+          _buildNext(),
         ],
       ),
     );
@@ -219,6 +220,25 @@ class TutorialCoachMarkWidgetState extends State<TutorialCoachMarkWidget> {
                 ],
               ),
             ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildNext() {
+    return Align(
+      alignment: Alignment.bottomCenter,
+      // widthFactor: MediaQuery.of(context).size.width,
+      child: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.only(bottom: 16.0),
+          child: IconButton(
+            icon: Icon(
+              Icons.arrow_forward,
+              color: Colors.white,
+            ),
+            onPressed: () => next(),
           ),
         ),
       ),
