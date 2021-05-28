@@ -208,10 +208,11 @@ class TutorialCoachMarkWidgetState extends State<TutorialCoachMarkWidget> {
               padding: const EdgeInsets.all(20.0),
               child: Row(
                 mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Icon(
                     Icons.close,
-                    color: Colors.white,
+                    color: Color(0xFF00D092),
                   ),
                   Text(
                     widget.textSkip,
